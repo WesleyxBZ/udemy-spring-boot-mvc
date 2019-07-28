@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+    <title>Spring-Boot Básico</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+
+<section class="layout-content" layout:fragment="corpo">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><i class="oi oi-caret-right"></i>
+                    <span>Home</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" id="list-home">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a aria-controls="spring-boot"
+                       class="list-group-item list-group-item-action active" data-toggle="list" href="#spring-boot"
+                       id="list-spring-boot-list" role="tab">Spring-Boot</a> <a
+                        aria-controls="sts" class="list-group-item list-group-item-action"
+                        data-toggle="list" href="#sts" id="list-sts-list" role="tab">Spring
+                    Tool Suite</a> <a aria-controls="thymeleaf"
+                                      class="list-group-item list-group-item-action" data-toggle="list"
+                                      href="#thymeleaf"
+                                      id="list-thymeleaf-list" role="tab">Thymeleaf</a> <a
+                        aria-controls="webjars"
+                        class="list-group-item list-group-item-action" data-toggle="list" href="#webjars"
+                        id="list-webjars-list" role="tab">WebJars</a> <a
+                        aria-controls="hibernate"
+                        class="list-group-item list-group-item-action" data-toggle="list" href="#hibernate"
+                        id="list-hibernate-list" role="tab">Hibernate</a> <a
+                        aria-controls="bootstrap"
+                        class="list-group-item list-group-item-action" data-toggle="list" href="#bootstrap"
+                        id="list-bootstrap-list" role="tab">Bootstrap 4</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div aria-labelledby="list-spring-boot-list" class="tab-pane fade show active"
+                         id="spring-boot" role="tabpanel">
+                        <a href="https://projects.spring.io/spring-boot/">Spring Boot</a>
+                        makes it easy to create stand-alone, production-grade Spring
+                        based Applications that you can "just run". We take an
+                        opinionated view of the Spring platform and third-party libraries
+                        so you can get started with minimum fuss. Most Spring Boot
+                        applications need very little Spring configuration.
+                    </div>
+                    <div aria-labelledby="list-sts-list" class="tab-pane fade" id="sts"
+                         role="tabpanel">
+                        The <a href="https://spring.io/tools">Spring Tool Suite</a> is an
+                        Eclipse-based development environment that is customized for
+                        developing Spring applications. It provides a ready-to-use
+                        environment to implement, debug, run, and deploy your Spring
+                        applications, including integrations for Pivotal tc Server,
+                        Pivotal Cloud Foundry, Git, Maven, AspectJ, and more.
+                    </div>
+                    <div aria-labelledby="list-thymeleaf-list" class="tab-pane fade" id="thymeleaf"
+                         role="tabpanel">
+                        <a href="http://www.thymeleaf.org/">Thymeleaf</a> is a modern
+                        server-side Java template engine for both web and standalone
+                        environments. With modules for Spring Framework, a host of
+                        integrations with your favourite tools, and the ability to plug
+                        in your own functionality, Thymeleaf is ideal for modern-day
+                        HTML5 JVM web development — although there is much more it can
+                        do.
+                    </div>
+                    <div aria-labelledby="list-webjars-list" class="tab-pane fade" id="webjars"
+                         role="tabpanel">
+                        <a href="https://www.webjars.org/">WebJars</a> are client-side
+                        web libraries (e.g. jQuery ; Bootstrap) packaged into JAR (Java
+                        Archive) files.
+                    </div>
+                    <div aria-labelledby="list-hibernate-list" class="tab-pane fade" id="hibernate"
+                         role="tabpanel">
+                        <a href="http://hibernate.org/orm/">Hibernate ORM</a> enables
+                        developers to more easily write applications whose data outlives
+                        the application process. As an Object/Relational Mapping (ORM)
+                        framework, Hibernate is concerned with data persistence as it
+                        applies to relational databases (via JDBC). <br/>In addition to
+                        its own "native" API, Hibernate is also an implementation of the
+                        Java Persistence API (JPA) specification. As such, it can be
+                        easily used in any environment supporting JPA including Java SE
+                        applications, Java EE application servers, Enterprise OSGi
+                        containers, etc.
+                    </div>
+                    <div aria-labelledby="list-bootstrap-list" class="tab-pane fade" id="bootstrap"
+                         role="tabpanel">
+                        <a href="https://getbootstrap.com/">Bootstrap</a> is an open
+                        source toolkit for developing with HTML, CSS, and JS. Quickly
+                        prototype your ideas or build your entire app with our Sass
+                        variables and mixins, responsive grid system, extensive prebuilt
+                        components, and powerful plugins built on jQuery.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring-Boot Básico</title>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link rel="icon" th:href="@{/image/favicon.png}"/>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet"
+          th:href="@{/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css}"/>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<header th:replace="fragments/header :: cabecalho">
+    <div>Header</div>
+</header>
+
+<div class="layout-main">
+    <aside>
+        <nav th:replace="fragments/sidebar :: nav-sidebar">
+            <span>Menu</span>
+        </nav>
+    </aside>
+
+    <section layout:fragment="corpo">
+        <div>Conteúdo</div>
+    </section>
+</div>
+
+<footer th:replace="fragments/footer :: rodape">
+    <div>Footer</div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/jquery-mask-plugin/dist/jquery.mask.min.js}"></script> <!-- JQUERY Mask para sálário  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+<script type="text/javascript">
+
+    var url = '';
+
+    $('button[id*="btn_"]').click(function () {
+        url = "/" + $(this).attr('id').split("_")[1];
+    });
+
+    $('#ok_confirm').click(function () {
+        document.location.href = url;
+    });
+
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+
+    $(document).ready(function () {
+        $(".navbar-toggle").click(function () {
+            $(".sidebar").toggleClass("sidebar-open");
+        })
+    });
+
+</script>
+
+</body>
+</html>
